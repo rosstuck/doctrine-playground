@@ -17,15 +17,18 @@ if ($config['playground']['display_sql'] === true) {
     $setup->setSQLLogger(new \Doctrine\DBAL\Logging\EchoSQLLogger());
 }
 
-// And that's it! Create the EntityManager and return it for run.php to use.
-return \Doctrine\ORM\EntityManager::create(
+// Create the EntityManager we'll use to communicate with the database
+$entityManager = \Doctrine\ORM\EntityManager::create(
     $config['doctrine'],
     $setup
 );
 
+// Test and return it.
+testConnection($entityManager);
+return $entityManager;
 
-// This part of the code is boring and just reads in the connection details
-// from the YAML file.
+
+// This part of the code from here is boring config file reading and connection testing. Just ignore! //////////////////
 function getConfig()
 {
     $configFile = __DIR__ . '/config/config.yml';
@@ -38,4 +41,15 @@ function getConfig()
     $yamlParser = new Parser();
     $config = $yamlParser->parse(file_get_contents($configFile));
     return $config;
+}
+
+function testConnection(\Doctrine\ORM\EntityManager $entityManager)
+{
+    try {
+        $entityManager->getConnection()->connect();
+    } catch(Exception $e) {
+        echo "We tried to connect to your database but it seems the connection isn't configured correctly. Check your details in config/config.yml and try again.\n";
+        echo "If it helps, the raw error message we received was: \n\n".$e->getMessage();
+        die;
+    }
 }
