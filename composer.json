@@ -1,0 +1,14 @@
+{
+  "require": {
+    "doctrine/orm": "2.5.0-alpha2",
+    "doctrine/migrations": "dev-master",
+    "symfony/yaml": "@stable"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-0": {"": "src/"}
+  },
+  "config": {
+    "bin-dir": "bin"
+  }
+}
