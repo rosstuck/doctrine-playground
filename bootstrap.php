@@ -17,7 +17,7 @@ if ($config['playground']['display_sql'] === true) {
     $setup->setSQLLogger(new \Doctrine\DBAL\Logging\EchoSQLLogger());
 }
 
-// And that's it! Create the EntityManager
+// And that's it! Create the EntityManager and return it for run.php to use.
 return \Doctrine\ORM\EntityManager::create(
     $config['doctrine'],
     $setup
