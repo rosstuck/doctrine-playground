@@ -1,8 +1,8 @@
 doctrine:
-    driver: pdo_mysql
-    user: ~
-    password: ~
-    dbname: ~
+    driver: pdo_mysql   # If you're using MySQL, just leave this alone
+    user: ~             # Database username
+    password: ~         # Database user's password
+    dbname: ~           # Name of the database or schema to connect to
 
 playground:
     # If you set this option to true, all SQL issued from Doctrine will be
