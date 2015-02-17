@@ -2,7 +2,8 @@
   "require": {
     "doctrine/orm": "2.5.0-alpha2",
     "doctrine/migrations": "dev-master",
-    "symfony/yaml": "@stable"
+    "symfony/yaml": "@stable",
+    "phpunit/phpunit": "@stable"
   },
   "minimum-stability": "dev",
   "autoload": {
