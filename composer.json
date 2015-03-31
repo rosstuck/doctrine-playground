@@ -1,6 +1,6 @@
 {
   "require": {
-    "doctrine/orm": "2.5.0-alpha2",
+    "doctrine/orm": "2.5.0-rc1",
     "doctrine/migrations": "dev-master",
     "symfony/yaml": "@stable",
     "phpunit/phpunit": "@stable"
