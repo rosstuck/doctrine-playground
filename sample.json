@@ -1,0 +1,29 @@
+[
+  {
+    "search_score": 0.95,
+    "id": 1,
+    "first_name": "Aisha",
+    "middle_name": "Amber",
+    "last_name": "Anderson",
+    "address": "123 Spring Street",
+    "dob": "1984-06-21"
+  },
+  {
+    "search_score": 0.85,
+    "id": 2,
+    "first_name": "Bob",
+    "middle_name": "Beau",
+    "last_name": "Brown",
+    "address": "227 Summer Lane",
+    "dob": "1984-11-10"
+  },
+  {
+    "search_score": 0.75,
+    "id": 3,
+    "first_name": "Cecil",
+    "middle_name": "",
+    "last_name": "Carter",
+    "address": "384 Winter Drive",
+    "dob": "1959-08-20"
+  }
+]

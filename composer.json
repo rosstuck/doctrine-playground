@@ -1,11 +1,12 @@
 {
   "require": {
-    "doctrine/orm": "2.5.0-rc1",
+    "doctrine/orm": "2.5.0",
     "doctrine/migrations": "dev-master",
     "symfony/yaml": "@stable",
-    "phpunit/phpunit": "@stable"
+    "phpunit/phpunit": "@stable",
+    "beberlei/assert": "~2.3@dev",
+    "rhumsaa/uuid": "~2.8@dev"
   },
-  "minimum-stability": "dev",
   "autoload": {
     "psr-0": {"": "src/"}
   },
