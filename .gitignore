@@ -1,3 +1,4 @@
 bin/
+!bin/refresh-db
 vendor/
 config/config.yml

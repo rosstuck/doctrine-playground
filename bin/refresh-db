@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+$run = function ($desc, $command, $breakOnFailure = true) {
+    echo $desc."...\n";
+
+    $returnCode = null;
+    passthru(__DIR__ . '/' . $command, $returnCode);
+    echo "\n";
+
+    if ($breakOnFailure && $returnCode !== 0) {
+        die("Failed ".strtolower($desc).". Aborting.\n");
+    }
+};
+
+$run('Validating Schema',  'doctrine orm:validate-schema', false);
+$run('Calculating SQL patch', 'doctrine orm:schema-tool:update --dump-sql');
+$run('Updating database',     'doctrine orm:schema-tool:update --force');
