@@ -8,7 +8,7 @@ just what you're looking for.
 ## Setup
 1. Clone this repo: `git clone git@github.com:rosstuck/doctrine-playground.git`
 2. Install the dependencies: `composer install`
-3. Copy `config/copy.yml.dist` to `config/config.yml` and fill in your database details.
+3. Copy `config/config.yml.dist` to `config/config.yml` and fill in your database details.
 4. Write your test code in run.php and execute it with `php run.php`
 
 You can also add your own sample code in the src directory. Doctrine is setup
