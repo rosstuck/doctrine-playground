@@ -6,12 +6,19 @@
     "phpunit/phpunit": "@stable",
     "beberlei/assert": "~2.3@dev",
     "rhumsaa/uuid": "~2.8@dev",
-    "pimple/pimple": "^3.0"
+    "pimple/pimple": "^3.0",
+    "tuck/doctrine-event-store": "dev-master"
   },
   "autoload": {
     "psr-0": {"": "src/"}
   },
   "config": {
     "bin-dir": "bin"
-  }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/rosstuck/DoctrineEventStore"
+    }
+  ]
 }
