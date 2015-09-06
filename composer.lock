@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "78a335d97c0e2d8e282225aa6cd0bebe",
+    "hash": "b7f2b17192c76814340b847d287f69f5",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -16,7 +16,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/beberlei/assert/zipball/71fc0247858b67bad5622e4bee78c4856f073a03",
+                "url": "https://api.github.com/repos/beberlei/assert/zipball/98663dc70f374902ca7ce59ae4419ddccf6f5696",
                 "reference": "71fc0247858b67bad5622e4bee78c4856f073a03",
                 "shasum": ""
             },
@@ -54,6 +54,126 @@
                 "validation"
             ],
             "time": "2015-02-23 11:12:05"
+        },
+        {
+            "name": "broadway/broadway",
+            "version": "0.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/qandidate-labs/broadway.git",
+                "reference": "0fce8c532086ad249a46fec179759c1fa089e35d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/qandidate-labs/broadway/zipball/0fce8c532086ad249a46fec179759c1fa089e35d",
+                "reference": "0fce8c532086ad249a46fec179759c1fa089e35d",
+                "shasum": ""
+            },
+            "require": {
+                "beberlei/assert": "~2.0",
+                "broadway/uuid-generator": "~0.1.0",
+                "php": ">=5.3.3",
+                "rhumsaa/uuid": "~2.4"
+            },
+            "require-dev": {
+                "doctrine/dbal": "~2.4",
+                "doctrine/mongodb": "~1.0",
+                "elasticsearch/elasticsearch": "~1.0",
+                "instaclick/base-test-bundle": "~0.5",
+                "monolog/monolog": "~1.8",
+                "symfony/console": "~2.4",
+                "symfony/proxy-manager-bridge": "~2.4"
+            },
+            "suggest": {
+                "doctrine/dbal": "For the BroadwayBundle (to persist events)",
+                "doctrine/mongodb": "For persisting saga states (required for BroadwayBundle)",
+                "elasticsearch/elasticsearch": "For persisting read models (required for BroadwayBundle)",
+                "psr/log-implementation": "Implementation for PSR3, LoggerInterface",
+                "symfony/console": "For the BroadwayBundle",
+                "symfony/proxy-manager-bridge": "For the BroadwayBundle"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.6.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Broadway\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "othillo",
+                    "email": "othillo@othillo.nl"
+                },
+                {
+                    "name": "Alexander",
+                    "email": "iam.asm89@gmail.com"
+                },
+                {
+                    "name": "Qandidate.com",
+                    "homepage": "http://labs.qandidate.com/"
+                },
+                {
+                    "name": "Willem-Jan",
+                    "email": "wjzijderveld@gmail.com"
+                },
+                {
+                    "name": "Emil",
+                    "email": "emil@broekmeulen.com"
+                },
+                {
+                    "name": "Fritsjan",
+                    "email": "fritsjan@qandidate.com"
+                }
+            ],
+            "description": "Infrastructure and testing helpers for creating CQRS and event sourced applications.",
+            "keywords": [
+                "cqrs",
+                "ddd",
+                "domain-driven design",
+                "event sourcing"
+            ],
+            "time": "2015-03-31 18:15:05"
+        },
+        {
+            "name": "broadway/uuid-generator",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/qandidate-labs/broadway-uuid-generator.git",
+                "reference": "58380b723c671807131fe9ac0ff077f162be47bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/qandidate-labs/broadway-uuid-generator/zipball/58380b723c671807131fe9ac0ff077f162be47bb",
+                "reference": "58380b723c671807131fe9ac0ff077f162be47bb",
+                "shasum": ""
+            },
+            "require-dev": {
+                "rhumsaa/uuid": "~2.4"
+            },
+            "suggest": {
+                "rhumsaa/uuid": "Allows creating UUIDs"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Broadway\\UuidGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "UUID generator for broadway/broadway.",
+            "time": "2014-09-12 14:14:07"
         },
         {
             "name": "doctrine/annotations",
@@ -588,7 +708,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/migrations/zipball/67f02686c6c779ae50489728b91026bc8199720c",
+                "url": "https://api.github.com/repos/doctrine/migrations/zipball/4e85ba638acf62e1afe735f94b0c51aa971f8773",
                 "reference": "efb77c10dfb75485998a843154bbc44d8124c4d1",
                 "shasum": ""
             },
@@ -1785,6 +1905,52 @@
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
             "time": "2015-03-30 15:54:10"
+        },
+        {
+            "name": "tuck/doctrine-event-store",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rosstuck/DoctrineEventStore.git",
+                "reference": "79847966a39f1fea73ebd37d567495d735b41be6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rosstuck/DoctrineEventStore/zipball/79847966a39f1fea73ebd37d567495d735b41be6",
+                "reference": "79847966a39f1fea73ebd37d567495d735b41be6",
+                "shasum": ""
+            },
+            "require": {
+                "broadway/broadway": "0.5.*",
+                "doctrine/orm": "~2.5"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "~4.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tuck\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Tuck\\Tests\\": "tests/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Ross Tuck",
+                    "email": "me@rosstuck.com"
+                }
+            ],
+            "description": "Bridges Doctrine ORM with Broadway event store",
+            "support": {
+                "source": "https://github.com/rosstuck/DoctrineEventStore/tree/master",
+                "issues": "https://github.com/rosstuck/DoctrineEventStore/issues"
+            },
+            "time": "2015-09-06 18:48:58"
         }
     ],
     "packages-dev": [],
@@ -1795,7 +1961,8 @@
         "symfony/yaml": 0,
         "phpunit/phpunit": 0,
         "beberlei/assert": 20,
-        "rhumsaa/uuid": 20
+        "rhumsaa/uuid": 20,
+        "tuck/doctrine-event-store": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
